@@ -1,0 +1,83 @@
+.favorite {
+  position: relative;
+  cursor: pointer;
+  right: 1.5rem;
+  top: 0.5rem;
+  font-size: 3rem;
+  @include respond(tab-port) {
+    font-size: 4.5rem;
+  }
+
+  @include respond(tab-land) {
+    font-size: 4.5rem;
+  }
+  @include respond(desktop) {
+    right: 1rem;
+    font-size: 5rem;
+  }
+
+  @include respond(desktop-big) {
+    right: 1rem;
+    font-size: 5.5rem;
+  }
+  &--empty {
+    color: black;
+    position: absolute;
+    z-index: 2;
+
+    &:active {
+      color: $primary-color;
+    }
+  }
+
+  &--filled {
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    color: transparent;
+  }
+
+  &:hover {
+    & .favorite--empty {
+      opacity: 0;
+      color: $primary-color;
+      transform: scale(2);
+      transition: all 0.5s;
+    }
+    & .favorite--filled {
+      opacity: 1;
+      background: linear-gradient(
+        to bottom right,
+        $primary-color,
+        $secondary-color
+      );
+      -webkit-background-clip: text;
+    }
+  }
+
+  &--cards {
+    @include respond(tablet) {
+      font-size: 4rem;
+    }
+
+    @include respond(desktop) {
+      font-size: 3rem;
+    }
+    @include respond(desktop-big) {
+      font-size: 3.5rem;
+    }
+  }
+  &--page {
+    right: -1rem;
+    top: 0rem;
+
+    @include respond(tablet) {
+      right: 1rem;
+    }
+
+    @include respond(desktop) {
+      right: 1rem;
+      top: 0.5rem;
+    }
+  }
+}
