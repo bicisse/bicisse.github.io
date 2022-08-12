@@ -1,0 +1,99 @@
+.header {
+  background-color: $light-grey;
+  &__logo-box {
+    width: 100%;
+    background-color: $white;
+    padding: 1rem;
+    padding-top: 2rem;
+    text-align: center;
+
+    @include respond(tablet) {
+      margin: 0px;
+    }
+    @include respond(desktop-all-sizes) {
+      margin: 0 auto;
+      text-align: left;
+
+      background-color: $light-grey;
+    }
+
+    &--page {
+      @include respond(desktop-all-sizes) {
+        background-color: $white !important;
+        height: 7rem;
+        text-align: center;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &__logo {
+    height: 3rem;
+    display: block;
+
+    @include respond(tablet) {
+      height: 4rem;
+      display: inline-block;
+      margin: 0;
+    }
+
+    @include respond(desktop) {
+      height: 3.5rem;
+      display: inline-block;
+      margin: 0;
+    }
+    @include respond(desktop-big) {
+      height: 4rem;
+      display: inline-block;
+      margin: 0;
+    }
+    &--page {
+      text-align: center;
+    }
+  }
+}
+
+.location {
+  background-color: $medium-grey;
+  border-top: 0.3rem solid $dark-grey;
+  width: 100%;
+  height: fit-content;
+
+  @include respond(desktop) {
+    height: 3.5rem;
+    
+  }
+  @include respond(desktop-big) {
+    height: 4rem;
+  }
+  @include respond(desktop-all-sizes) {
+    background-color: $light-grey;
+    border-top: none;
+  }
+
+  &__icon {
+    font-size: 1.5rem;
+    line-height: 2.5 !important;
+
+    @include respond(tablet) {
+      font-size: 2.5rem;
+    }
+
+    @include respond(desktop-all-sizes) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__adress {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.5;
+
+    @include respond(tablet) {
+      font-size: 2.5rem;
+    }
+    @include respond(desktop-all-sizes) {
+      font-size: 2.5rem;
+    }
+  }
+}

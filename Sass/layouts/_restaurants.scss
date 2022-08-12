@@ -1,0 +1,114 @@
+.restaurant {
+  background-color: $light-grey;
+  margin-top: 7rem;
+
+  &__selection {
+    padding: 2.5rem;
+  }
+  &__card {
+    width: 100%;
+    overflow: hidden;
+    height: 25rem;
+    position: relative;
+    background-color: $white;
+    border-radius: 1.5rem;
+    box-shadow: $shadow-2;
+    transition: transform 0.2s ease-in-out;
+    margin: 0 auto;
+    cursor: pointer;
+
+    @include respond(tablet) {
+      height: 30rem;
+    }
+
+    @include respond(desktop) {
+      height: 25rem;
+      // flex-direction: column;
+    }
+    @include respond(desktop-big) {
+      height: 30rem;
+      // flex-direction: column;
+    }
+
+    &:last-child {
+      margin-bottom: 5rem;
+    }
+    &:hover {
+      box-shadow: $shadow-1;
+      transform: translateY(-1rem) scale(1.02);
+    }
+
+    @include respond(tablet) {
+      width: 48%;
+    }
+
+    @include respond(desktop-all-sizes) {
+      width: 23%;
+    }
+  }
+  &__new {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    padding: 0.3rem 1rem;
+    border-radius: 2px;
+    background-color: $tertiary-color;
+    color: $tertiary-color-dark;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    @include respond(tablet) {
+      font-size: 2rem;
+      border-radius: 5px;
+    }
+
+    @include respond(desktop-all-sizes) {
+      font-size: 2rem;
+      border-radius: 5px;
+    }
+  }
+  &__img {
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  &__informations {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+
+    padding-left: 2rem;
+    padding-top: 1rem;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 1.8rem;
+    @include respond(tablet) {
+      font-size: 2.5rem;
+    }
+
+    @include respond(desktop) {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    @include respond(desktop-big) {
+      font-size: 2.3rem;
+    }
+  }
+  &__quartier {
+    font-size: 1.7rem;
+
+    @include respond(tablet) {
+      font-size: 2.4rem;
+    }
+    @include respond(desktop) {
+      font-size: 1.9rem;
+    }
+    @include respond(desktop-big) {
+      font-size: 2.2rem;
+    }
+  }
+}
